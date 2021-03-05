@@ -7,6 +7,9 @@
     transition: all 0.3s ease;
     -webkit-transition: all .3s ease;
 }
+html{
+    scroll-behavior: smooth;
+}
 body {
      font-family: 'Roboto',
      sans-serif;
@@ -123,6 +126,11 @@ header{
         display: none;
     }
 }
+@media only screen and (max-width: 767px) {
+    .search input {
+        display: block;
+    }
+}
 
 @media only screen and (max-width: 991px) {
     .volunter-btn {
@@ -132,7 +140,14 @@ header{
 
 @media only screen and (max-width: 767px) {
     .volunter-btn {
-        padding: 15px 10px;
+
+        padding: 10px 15px;
+    }
+}
+@media only screen and (max-width: 567px) {
+    .volunter-btn {
+        font-size: 10px;
+        padding: 10px 5px;
     }
 }
 
@@ -486,6 +501,17 @@ header{
 @media only screen and (max-width: 767px){
     #blog{
         height: 1100px;
+        .sec-title{
+             h2 {
+                 font-size: 16px;
+            }
+            .double-line{
+                top: -2px;
+                margin: 0 5px;
+                width: 25px;
+                height: 7px;
+            }
+        }
     }
 }
 @media only screen and (max-width: 576px) {
@@ -497,7 +523,7 @@ header{
 
 /* ----- start Footer------*/
 #footer{
-    height: 420px;
+    height: 500px;
     background: #fff0af url(../img/footer-bg.png);
     background-blend-mode: multiply;
     .row{
@@ -507,16 +533,36 @@ header{
             width: 200px;
         }
         .contact{
-            img{
-                width: 40px;
-                padding: 3px;
-                background: #fff;
-                border: 1px solid #fd645b;
-                border-radius: 50%;
-            }
             :hover img{
                 background-color: $secondaryColor;
             }
+            a{
+                display: inline-block;
+                width: 50px;
+                height: 50px;
+                padding: 14px;
+                background: #fff;
+                border: 1px solid #fd645b;
+                border-radius: 50%;
+                i {
+                    font-size: 20px;
+                }
+                .fa-facebook-f{
+                    margin-left: 4px;
+                }
+                .fa-youtube{
+                    color: red;
+                }
+            }
+            a:hover {
+                color: #fff;
+                background: $secondaryColor;
+            }
+            a:hover .fa-youtube{
+                color: #fff;
+                background: $secondaryColor;
+            }
+
         }
 
         ul {
